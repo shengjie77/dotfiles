@@ -1,0 +1,22 @@
+ctrl + cmd - return : yabai -m window --grid 1:1:0:0:1:1
+ctrl + cmd - left : yabai -m window --grid 1:2:0:0:1:1
+ctrl + cmd - right : yabai -m window --grid 1:2:1:0:1:1
+ctrl + cmd - up : yabai -m window --grid 2:1:0:0:1:1
+ctrl + cmd - down : yabai -m window --grid 2:1:0:1:1:1
+
+# Set layout of the space (options: bsp, float)
+ctrl + cmd - a : yabai -m space --layout float
+ctrl + cmd - s : yabai -m space --layout bsp
+
+ctrl + cmd - l : yabai -m window --focus east
+ctrl + cmd - h : yabai -m window --focus west
+ctrl + cmd - k : yabai -m window --focus north
+ctrl + cmd - j : yabai -m window --focus south
+
+ctrl + cmd - f : yabai -m window --toggle zoom-fullscreen
+ctrl + cmd - p : yabai -m space --rotate 90
+ctrl + cmd - w : yabai -m window --swap recent
+
+ctrl + alt - h : yabai -m display --focus prev
+ctrl + alt - l : yabai -m display --focus next
+
