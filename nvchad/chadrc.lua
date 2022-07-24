@@ -10,6 +10,26 @@ M.ui = {
 }
 
 M.mappings = {
+    general = {
+        n = {
+            ["<A-p>"] = {
+                function()
+                    vim.cmd("WhichKey <leader>")
+                end,
+                "Open WhichKey Menu",
+            },
+        },
+    },
+    nvterm = {
+        t = {
+            ["<A-p>"] = {
+                function()
+                    vim.cmd("WhichKey <leader>")
+                end,
+                "Open WhichKey Menu",
+            },
+        },
+    },
     whichkey = {
         n = {
             ["<leader>we"] = {
@@ -27,6 +47,17 @@ M.mappings = {
             }
         },
     },
+}
+
+M.plugins = {
+   override = {
+      ["kyazdani42/nvim-tree.lua"] = {},
+      ["folke/which-key.nvim"] = {
+        window = {
+            border = "single",
+        },
+      },
+   }
 }
 
 return M
