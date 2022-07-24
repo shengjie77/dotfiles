@@ -6,7 +6,7 @@ local M = {}
 -- example of changing theme:
 
 M.ui = {
-   theme = "tokyodark",
+   theme = "onedark",
 }
 
 M.mappings = {
@@ -37,6 +37,48 @@ M.mappings = {
                     vim.cmd("NvimTreeToggle")
                 end,
                 "Toggle file explorer",
+            },
+            ["<leader>wv"] = {
+                function()
+                    vim.cmd("vs")
+                end,
+                "Split window right",
+            },
+            ["<leader>ws"] = {
+                function()
+                    vim.cmd("split")
+                end,
+                "Split window below",
+            },
+            ["<leader>wd"] = {
+                function()
+                    vim.cmd("close")
+                end,
+                "Close window",
+            },
+            ["<leader>wh"] = {
+                function()
+                    vim.cmd("wincmd h")
+                end,
+                "Focus window left",
+            },
+            ["<leader>wj"] = {
+                function()
+                    vim.cmd("wincmd j")
+                end,
+                "Focus window down",
+            },
+            ["<leader>wk"] = {
+                function()
+                    vim.cmd("wincmd k")
+                end,
+                "Focus window up",
+            },
+            ["<leader>wl"] = {
+                function()
+                    vim.cmd("wincmd l")
+                end,
+                "Focus window right",
             },
         }
     },
