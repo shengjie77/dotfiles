@@ -84,6 +84,16 @@ M.mappings = {
             },
         }
     },
+    lspconfig = {
+        n = {
+            ["gh"] = {
+                function()
+                    vim.lsp.buf.hover()
+                end,
+                "   lsp hover",
+            }
+        }
+    },
     groups = {
         n = {
             ["<leader>"] = {
