@@ -5,6 +5,8 @@ local M = {}
 -- make sure you maintain the structure of `core/default_config.lua` here,
 -- example of changing theme:
 
+-- 参考 https://github.com/siduck/dotfiles/tree/master/nvchad/custom
+
 M.ui = {
    theme = "onedark",
 }
@@ -99,6 +101,14 @@ M.plugins = {
             border = "single",
         },
       },
+   },
+   user = {
+      ["neovim/nvim-lspconfig"] = {
+        config = function()
+            require "plugins.configs.lspconfig"
+            require "custom.plugins.lspconfig"
+            end,
+        },
    }
 }
 
