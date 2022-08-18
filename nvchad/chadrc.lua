@@ -94,23 +94,27 @@ M.mappings = {
             }
         }
     },
-    groups = {
-        n = {
-            ["<leader>"] = {
-                w = { name = "Windows management" },
-            }
-        },
-    },
 }
 
 M.plugins = {
    override = {
       ["kyazdani42/nvim-tree.lua"] = {},
-      ["folke/which-key.nvim"] = {
-        window = {
-            border = "single",
-        },
-      },
+      ["folke/which-key.nvim"] = function()
+        local wk = require("which-key")
+        wk.register({
+            w = {
+                name = "Windows management",
+            }
+        }, {
+            prefix = "<leader>",
+        }) 
+
+        return {
+            window = {
+                border = "single",
+            }
+        }
+      end
    },
    user = {
       ["neovim/nvim-lspconfig"] = {
@@ -119,6 +123,9 @@ M.plugins = {
             require "custom.plugins.lspconfig"
             end,
         },
+      ["folke/which-key.nvim"] = {
+        disable = false,
+      },
    }
 }
 
