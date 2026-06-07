@@ -7,13 +7,7 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 Install `chezmoi`, then initialize this repository:
 
 ```sh
-chezmoi init --apply git@github.com:$GITHUB_USERNAME/dotfiles.git
-```
-
-For this repository, replace `$GITHUB_USERNAME` with:
-
-```sh
-shengjie77
+chezmoi init --apply git@github.com:shengjie77/dotfiles.git
 ```
 
 ## Add Dotfiles
