@@ -1,9 +1,10 @@
 #!/bin/sh
 set -eu
 
-SOURCE_DIR="/Users/shengjie/Documents/code/dotfiles"
-CHEZMOI="${CHEZMOI:-/opt/homebrew/bin/chezmoi}"
-GIT="${GIT:-/opt/homebrew/bin/git}"
+SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+SOURCE_DIR=$(CDPATH= cd -- "$SCRIPT_DIR/.." && pwd)
+CHEZMOI="${CHEZMOI:-$(command -v chezmoi)}"
+GIT="${GIT:-$(command -v git)}"
 
 cd "$SOURCE_DIR"
 
