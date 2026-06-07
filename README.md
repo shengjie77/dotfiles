@@ -4,24 +4,16 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 
 ## Setup
 
-Install `chezmoi`, then point it at this repository:
+Install `chezmoi`, then initialize this repository:
 
 ```sh
-mkdir -p ~/.config/chezmoi
-cat > ~/.config/chezmoi/chezmoi.toml <<'EOF'
-sourceDir = "/path/to/this/repo"
-
-[git]
-autoAdd = true
-autoCommit = true
-autoPush = true
-EOF
+chezmoi init --apply git@github.com:$GITHUB_USERNAME/dotfiles.git
 ```
 
-On this machine, the source directory is:
+For this repository, replace `$GITHUB_USERNAME` with:
 
-```text
-/Users/shengjie/Documents/code/dotfiles
+```sh
+shengjie77
 ```
 
 ## Add Dotfiles
@@ -62,9 +54,8 @@ from any clone path.
 
 ## New Machine
 
-Clone the repository, configure `sourceDir` to that clone path, then apply:
+Initialize and apply the dotfiles:
 
 ```sh
-git clone git@github.com:shengjie77/dotfiles.git ~/Documents/code/dotfiles
-chezmoi apply
+chezmoi init --apply git@github.com:shengjie77/dotfiles.git
 ```
